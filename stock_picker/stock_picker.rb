@@ -14,7 +14,7 @@ def stock_picker (stock_array)
       maybe_best_day = stock_array[sellday] - stock_array[buyday]  #mbd stores stock_array sellday and subtracts the buyday purchase price resulting in net gain for the potential days
       current_best_day = stock_array[best_day[1]] - stock_array[best_day[0]]  #cbd stores day with the most positive netgain at respective point of the loop 
       
-      if maybe_best_day > current_best_day  #if determines if mbd is greater than cbd, if so best_day captures current iterations buyday/sellday in updated best_day
+      if maybe_best_day > current_best_day  #determines if mbd is greater than cbd, if so best_day captures current iterations buyday/sellday in updated best_day
         best_day = [buyday, sellday]
       end 
     
